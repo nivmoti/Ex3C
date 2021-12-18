@@ -11,31 +11,21 @@ void words(char Word[]){
     int i=0;
     while (a!=' '&&a!='\t'&&a!='\n'&&i<30)
     {
-      scanf("%s",Word);
-        Word[strlen(Word)-1]=a;
-        i=strlen(Word);
+      scanf("%c",&a);
+        Word[i]=a;
+        i++;
     }
       
 }
 void texts(char text[]){
     char a;
     int i=0;
-    char te[TXT];
     while (a!='~'&&i<1024)
     {
-      fgets(te,TXT,stdin);
-      int j=0;
-      while (a!='~'&&j<strlen(te))
-      {
-          a=te[j];
-          text[i]=a;
-          j++;
-          i++;
-      }
-      
-      
+      scanf("%c",&a);
+        text[i]=a;
+        i++;
     }
-    text[strlen(text)]='~';
       
 }
 
