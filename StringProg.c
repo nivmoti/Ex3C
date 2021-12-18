@@ -7,24 +7,25 @@
 
 
 void words(char Word[]){
-    char a;
-    int i=0;
-    while (a!=' '&&a!='\t'&&a!='\n'&&i<30)
-    {
-      scanf("%c",&a);
-        Word[i]=a;
-        i++;
-    }
+    // char a;
+    // int i=0;
+    // while (a!=' '&&a!='\t'&&a!='\n'&&i<30)
+    // {
+    //   'scanf("%c",&a);'
+    //     Word[i]=a;
+    //     i++;
+    // }
+    scanf("%s",Word);
+
       
 }
 void texts(char text[]){
-    char a;
+    char te[TXT];
     int i=0;
-    while (a!='~'&&i<1024)
+    while (te[strlen(te)-1]='~'&&i<1024)
     {
-      scanf("%c",&a);
-        text[i]=a;
-        i++;
+        fgets(te,TXT,stdin);      
+        strcat(text,te);
     }
       
 }
