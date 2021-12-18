@@ -12,6 +12,8 @@ int main(){
     G(text,word);
     Atb(text,word);
     isExist(word,text);
+    return 0;
+    
 
     
 }
