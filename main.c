@@ -8,16 +8,18 @@
 int main(){
     char Word[WORD];
      //printf("word:\n");
-    char a;
-    int i=0;
-    scanf("%c",&a);
-    Word[i]=a;
-    i++;
-    while(a!=' '){
-     scanf("%c",&a);
-        Word[i]=a;
-        i++;
-    }
+    // char a;
+    // int i=0;
+    // scanf("%c",&a);
+    // Word[i]=a;
+    // i++;
+    // while(a!=' '){
+    //  scanf("%c",&a);
+    //     Word[i]=a;
+    //     i++;
+    // }
+    scanf("%s",Word);
+    int i=strlen(Word);
     char w[WORD];
     int k=0;
     for (int j = 0; j < i;j++)
