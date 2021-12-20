@@ -8,15 +8,15 @@
 //gets word
 void words(char Word[]){
     printf("word:\n");
-    // char a;
-    scanf("%s",Word);
-    // int i=0;
-    // while ((a!=' ')&&(a!='\t')&&(a!='\n'))
-    // {   
-    //     Word[i]=a;
-    //     scanf("%c",&a);
-    //     i++;
-    // }    
+     char a;
+    scanf("%c",&a);
+     int i=0;
+    while ((a!=' ')&&(a!='\t')&&(a!='\n'))
+     {   
+         Word[i]=a;
+         scanf("%c",&a);
+       i++;
+    }    
    
 }
 //gets text
