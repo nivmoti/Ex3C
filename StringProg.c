@@ -28,10 +28,6 @@ void texts(char text[]){
     while (a!='~'&&i<1024)
     {
         scanf("%c",&a);
-        if (a=='\n')
-        {
-            continue;
-        }
       
         text[i]=a;
         i++;   
