@@ -7,20 +7,21 @@
 
 //gets word
 void words(char Word[]){
-    printf("enter a word:");
-    // char a;
-    scanf("%s",Word);
-    // int i=0;
-    // while (a!=' '&&a!='\t'&&a!='\n')
-    // {   
-    //     Word[i]=a;
-    //     scanf("%s",Word);
-    //     i++;
-    // }    
+    printf("word:\n");
+    char a;
+    scanf("%c",&a);
+    int i=0;
+    while ((a!=' ')&&(a!='\t')&&(a!='\n'))
+    {   
+        Word[i]=a;
+        scanf("%c",&a);
+        i++;
+    }    
+   
 }
 //gets text
 void texts(char text[]){
-    printf("enter a text");
+    printf("text:\n");
     char a;
     int i=0;
     while (a!='~'&&i<1024)
@@ -33,7 +34,8 @@ void texts(char text[]){
       
         text[i]=a;
         i++;   
-    }      
+    }  
+      
 }
 //A:
 int G(char* te,char wo[])
@@ -169,7 +171,7 @@ int Atb(char te[],char wo[])
             l++;
             int j = 1;
             int k=1;
-            while(j<strlen(opop)-1&&isCorr==1&&l<strlen(te))
+            while(j<strlen(opop)-2&&isCorr==1&&l<strlen(te))
             {
                 if(te[l]==' '||te[l]=='\t'||te[l]=='\n')
                 {
@@ -181,12 +183,14 @@ int Atb(char te[],char wo[])
                     isCorr=0;
                     break;
                 }else{
+                    
+                    
                     k++;
                     j++;
                     l++;
                 }
             }
-            if(j==strlen(opop)-1&&isCorr==1)
+            if(j==strlen(opop)-2&&isCorr==1)
             {
                 strncat(ans,te+i,k);
                 strcat(ans,"~");
