@@ -4,25 +4,8 @@
 #define WORD 30
 #include "my_StringProg.h"
 
-
-//gets word
-// void words(char Word[]){
-//     printf("word:\n");
-//     char a;
-//     int i=0;
-//     scanf("%c",&a);
-//     Word[i]=a;
-//     while(a!=' '){
-//      scanf("%c",&a);
-//         Word[i]=a;
-//         i++;
-//     }
-//    // printf("%s\n",Word); 
-   
-// }
 //gets text
 void texts(char text[]){
-   // printf("text:\n");
     char a;
     int i=0;
     while (a!='~'&&i<1024)
@@ -31,10 +14,9 @@ void texts(char text[]){
       
         text[i]=a;
         i++;   
-    } 
-    
-      
+    }     
 }
+
 //A:
 int G(char* te,char wo[])
 {
@@ -129,20 +111,14 @@ int Atb(char te[],char wo[])
             op[i]=96+123-wo[i];
         } 
     }
-    
-
     for (int i = 0; i < strlen(op); i++)
     {
         opop[i]=op[strlen(op)-1-i];
     }
-    // printf("length of wo:%ld\n",strlen(wo));
-    // printf("length of op: %ld\n",strlen(op));
-    // printf("length of opop: %ld\n",strlen(opop));
     for (int i = 0; i < strlen(te)-1; i++)
     {    
         if(te[i]==op[0])
         {   
-           // printf("THIS IS OP");
             int l=i;
             int isCorr=1;
             if(l+1==strlen(te)&&strlen(wo)!=1)
@@ -152,7 +128,6 @@ int Atb(char te[],char wo[])
             int k=1;
             while(j<strlen(op)&&isCorr==1&&l<strlen(te))
             { 
-                //printf("check of op"); 
                 if(te[l]==' '||te[l]=='\t'||te[l]=='\n')
                 {
                     l++;
@@ -176,7 +151,6 @@ int Atb(char te[],char wo[])
         }
         if(te[i]==opop[0])
         {
-            //printf("THIS IS OPOP");
             int l=i;
             int isCorr=1;
             if(l+1==strlen(te)&&strlen(wo)!=1)
@@ -184,20 +158,8 @@ int Atb(char te[],char wo[])
             l++;
             int j = 1;
             int k=1;
-           // int m=0;
             while(j<strlen(opop)&&isCorr==1&&l<strlen(te))
-            {
-                // m++;
-                // if(m==10){
-                //     printf("this is j %d\n",j);
-                //     printf("this is l %d\n",l);
-                //     printf("this is te length %ld\n",strlen(te));
-                //     printf("this is opop len %ld\n",strlen(opop));
-                //     printf("this is boolean::%d",isCorr);
-                //     printf("this is the char: %c,\n",te[l]);
-                //     break;
-                // }
-               // printf("check of opop"); 
+            { 
                 if(te[l]==' '||te[l]=='\t'||te[l]=='\n')
                 {
                     k++;
@@ -206,10 +168,6 @@ int Atb(char te[],char wo[])
                 }
                 if(te[l]!=opop[j])
                 {
-                    // printf("%c",te[l]);
-                    // printf("\n");
-                    // printf("%c\n",opop[j]);
-                    // printf("%d",j);
                     isCorr=0;
                     break;
                 }else{
@@ -238,7 +196,6 @@ int Done(int is[],int size){
             for (int i = 0; i<size; i++)
             {
                 if(is[i]==0){
-                   // printf("is[%d]=0",i);
                     return 0;
                 }
             }
@@ -270,7 +227,6 @@ int isExist(char word[],char text[]){
         //text[i] is in the word
         if(isStart==1)
         {
-            //printf("this is i: %d\n",i);
             int l=i+1;
             int booleanIs=1;
             int end=Done(isexist,sizeof(isexist)/4);
@@ -299,8 +255,7 @@ int isExist(char word[],char text[]){
                     }
                 }
                 }
-                // printf("this is l: %d\n",l);
-                //printf("the boolean is: %d\n",booleanIs);
+                
                 end=Done(isexist,sizeof(isexist)/4);
                 l++;
         
@@ -308,19 +263,15 @@ int isExist(char word[],char text[]){
             //we find all the leters 
             if(end==1)
             {
-                //printf("we pass all the leters\n");
                 strcat(an,ans);
                 strcat(an,"~"); 
             //we didnt find the leters  
             }else{ if(l==strlen(text)) 
                     {
-                        //printf("l is end\n");
                         break;
                     }else{
-                        //printf("wrong lete\n");
                         if(wrongleter==1){
                             i=l-1;
-
                         }
                         strcpy(ans,"");
                          k=0;
@@ -328,13 +279,12 @@ int isExist(char word[],char text[]){
                         }
                  }
         }
-    }
-    //printf("the length is%ld\n",strlen(an));
-    
+    }    
     if(strlen(an)==0){
         an[0]='\0';
     }else{
         an[strlen(an)-1]='\0';
-    }    printf("Anagram Sequences: %s",an);
+    }   
+     printf("Anagram Sequences: %s",an);
     return 0;
 }

@@ -7,17 +7,6 @@
 
 int main(){
     char Word[WORD];
-     //printf("word:\n");
-    // char a;
-    // int i=0;
-    // scanf("%c",&a);
-    // Word[i]=a;
-    // i++;
-    // while(a!=' '){
-    //  scanf("%c",&a);
-    //     Word[i]=a;
-    //     i++;
-    // }
     scanf("%s",Word);
     int i=strlen(Word);
     char w[WORD];
@@ -29,15 +18,10 @@ int main(){
             k++;
         }
     }
-    
-    //printf("%s\n",w);
-        char text[TXT];
+    char text[TXT];
     texts(text);
     G(text,w);
-    
     Atb(text,w);
     isExist(w,text);
-
-
     return 0;
 }
