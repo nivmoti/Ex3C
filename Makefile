@@ -24,4 +24,4 @@ main.o:main.c my_StringProg.h
 
 .PHONY:clean
 clean:
-	rm -f *.o *.so stringProg
+	rm -f *.o *.so *.a stringProg

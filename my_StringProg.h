@@ -5,7 +5,7 @@
 
 void words(char Word[]);
 void texts(char text[]);
-int G(char te[],char wo[]);
+int G(char* te,char wo[]);
 int Atb(char te[],char wo[]);
 int isExist(char word[],char text[]);
 
